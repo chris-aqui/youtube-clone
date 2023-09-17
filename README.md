@@ -1,1 +1,5 @@
-# youtube-clone
+# YouTube Clone
+
+Full stack app
+
+
