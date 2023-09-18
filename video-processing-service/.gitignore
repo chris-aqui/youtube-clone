@@ -13,3 +13,22 @@ dist/
 
 # Ignore node modules
 node_modules/
+
+# Ignore videos files
+*.avi
+*.flv
+*.h264
+*.m4v
+*.mov
+*.mp4
+*.mpeg
+*.mpg
+*.webm
+
+# Ignore images
+*.jpg
+*.jpeg
+
+
+# Ignore DS_Store files
+.DS_Store

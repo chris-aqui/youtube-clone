@@ -2,6 +2,7 @@ import express from 'express';
 import ffmpeg from 'fluent-ffmpeg';
 
 const app = express();
+app.use(express.json()); // for parsing application/json
 
 
 app.post('/process-video', (req, res) => {
@@ -21,8 +22,10 @@ app.post('/process-video', (req, res) => {
 			console.log('Video processing finished !');
 			res.status(200).send('Video processing finished !');
 		})
-		.on('error', (err) => {
+		.on('error', (err, stdout, stderr) => {
 			console.log('Error while processing video', err);
+			console.log('ffmpeg stdout:', stdout);
+			console.log('ffmpeg stderr:', stderr);
 			res.status(500).send(`Error while processing video - ${err.message}`);
 		})
 		.save(outputVideoPath);
