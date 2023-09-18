@@ -53,7 +53,7 @@ app.post('/process-video', async (req, res) => {
 	])
 
 	// return a success response
-	return res.status(200).send('OK')
+	return res.status(200).send('Processing complete')
 
 });
 
