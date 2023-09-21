@@ -16,7 +16,7 @@ export default function Navbar() {
 			})
 
 			return () => unsubscribe(); // Cleanup on unmount
-	'use client';}, []);
+		}, []);
 
 
 	return (
